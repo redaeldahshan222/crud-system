@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="w-75 mx-auto rounded p-3 bg-info  ">
+    <h1 class="text-center" > crud sytesm</h1>
+    <div>
+        <label for="productnameinput">product name</label>
+        <input oninput="vadationname()"  class="form-control" type="text" id="productnameinput">
+        <div id="namemassege" class="alert alert-danger d-none">you should enter frist letter capital.....</div>
+    </div>
+    <div>
+        <label for="productpriceinput">product price</label>
+        <input  class="form-control" type="number" id="productpriceinput">
+    </div>
+
+    <div>
+        <label for="productcategoryinput">product category</label>
+        <input  class="form-control" type="text" id="productcategoryinput">
+    </div>
+
+    <div>
+        <label for="productdescriptioninput">product description</label>
+        <textarea  class="form-control" type="text" id="productdescriptioninput"></textarea>
+    </div>
+<button onclick="addprouct();"  class="btn btn-primary mt-3 w-100" id="addbtn">Addproduct</button>
+<button   class="btn btn-primary mt-3 w-100 d-none" id="updatebtn" onclick="updateproduct()">update product</button>
+
+<input id="searchinput" oninput=" search()" type="search" class="form-control my-3 w-75 mx-auto" placeholder="search by name.....">
+
+
+<table class="table my-3 text-center"  >
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>category</th>
+            <th>description</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody  id="tablebody">
+     
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<script src="css/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
